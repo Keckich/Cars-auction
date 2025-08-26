@@ -10,7 +10,6 @@ export default function Search() {
 	const [value, setValue] = useState("");
 
 	useEffect(() => {
-		console.log(searchTerm === "");
 		if (searchTerm === "") setValue("");
 	}, [searchTerm]);
 
