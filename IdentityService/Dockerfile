@@ -9,7 +9,7 @@ RUN dotnet restore "IdentityService/IdentityService.csproj"
 COPY . .
 
 WORKDIR /src/IdentityService
-RUN dotnet publish "IdentityService.csproj" -c Release -o /app/publish
+RUN dotnet publish "IdentityService.csproj" -c Release -o /app/publish --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app

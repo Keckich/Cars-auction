@@ -9,7 +9,7 @@ RUN dotnet restore "GatewayService/GatewayService.csproj"
 COPY . .
 
 WORKDIR /src/GatewayService
-RUN dotnet publish "GatewayService.csproj" -c Release -o /app/publish
+RUN dotnet publish "GatewayService.csproj" -c Release -o /app/publish --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app

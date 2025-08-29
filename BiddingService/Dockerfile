@@ -10,7 +10,7 @@ RUN dotnet restore "BiddingService/BiddingService.csproj"
 COPY . .
 
 WORKDIR /src/BiddingService
-RUN dotnet publish "BiddingService.csproj" -c Release -o /app/publish
+RUN dotnet publish "BiddingService.csproj" -c Release -o /app/publish --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
