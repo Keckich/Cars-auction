@@ -47,9 +47,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.RequireHttpsMetadata = false;
         options.TokenValidationParameters.ValidateAudience = false;
         options.TokenValidationParameters.NameClaimType = "username";
-
-        // remove it after fixing a problem with token signature
-        options.TokenValidationParameters.SignatureValidator = (token, _) => new JsonWebToken(token);
     });
 
 builder.Services.AddGrpc();
