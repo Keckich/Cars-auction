@@ -132,6 +132,20 @@ services:
                 condition: service_healthy
             auction-svc:
                 condition: service_started
+    notify-svc:
+        image: nmprog/notify-svc:latest
+        build:
+            context: .
+            dockerfile: NotificationService/Dockerfile
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:80
+            - RabbitMq__Host=rabbitmq
+        ports:
+            - 7004:80
+        depends_on:
+            rabbitmq:
+                condition: service_healthy
 volumes:
     pgdata:
     mongodata:
