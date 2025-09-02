@@ -65,12 +65,7 @@ namespace IdentityService
                     options.Events.RaiseInformationEvents = true;
                     options.Events.RaiseFailureEvents = true;
                     options.Events.RaiseSuccessEvents = true;
-                    //options.KeyManagement.Enabled = false;
-
-                    if (builder.Environment.IsEnvironment("Docker"))
-                    {
-                        options.IssuerUri = "http://localhost:5001";
-                    }
+                    options.IssuerUri = builder.Configuration["IssuerUri"];
 
                     // Use a large chunk size for diagnostic data in development where it will be redirected to a local file.
                     if (builder.Environment.IsDevelopment())
@@ -78,13 +73,11 @@ namespace IdentityService
                         options.Diagnostics.ChunkSize = 1024 * 1024 * 10; // 10 MB
                     }
                 })
-                //.AddDeveloperSigningCredential(persistKey: true)
-                //.AddSigningCredential(signingCredentials)
                 .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
-                .AddInMemoryClients(Config.Clients)
+                .AddInMemoryClients(Config.Clients(builder.Configuration))
                 .AddAspNetIdentity<ApplicationUser>()
-                //.AddLicenseSummary()
+                .AddLicenseSummary()
                 .AddProfileService<CustomProfileService>();
 
             builder.Services.ConfigureApplicationCookie(options =>
