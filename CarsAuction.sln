@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{654451D0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.UnitTests", "tests\AuctionService.UnitTests\AuctionService.UnitTests.csproj", "{EA04CFC9-E145-462F-A102-3522A15BF882}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.IntegrationTests", "tests\AuctionService.IntegrationTests\AuctionService.IntegrationTests.csproj", "{F7671B64-FC10-410B-B241-69074DC77F6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{EA04CFC9-E145-462F-A102-3522A15BF882}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA04CFC9-E145-462F-A102-3522A15BF882}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA04CFC9-E145-462F-A102-3522A15BF882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7671B64-FC10-410B-B241-69074DC77F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7671B64-FC10-410B-B241-69074DC77F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7671B64-FC10-410B-B241-69074DC77F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7671B64-FC10-410B-B241-69074DC77F6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,5 +81,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EA04CFC9-E145-462F-A102-3522A15BF882} = {654451D0-E63F-44BB-8A69-F9172476A54F}
+		{F7671B64-FC10-410B-B241-69074DC77F6B} = {654451D0-E63F-44BB-8A69-F9172476A54F}
 	EndGlobalSection
 EndGlobal
