@@ -161,6 +161,7 @@ services:
         - ID_URL_INTERNAL=http://identity-svc
         - NEXTAUTH_URL=https://app.carsauction.local
         - NEXTAUTH_URL_INTERNAL=http://web-app:3000
+        - NOTIFY_URL=https://api.carsauction.local/notifications
         - VIRTUAL_HOST=app.carsauction.local
         - VIRTUAL_PORT=3000
     nginx-proxy:
