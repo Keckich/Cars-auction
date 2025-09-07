@@ -34,24 +34,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{2A137CAC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{A17FE800-9F24-4CB6-9B5B-8D2BED1D6D7B}"
 	ProjectSection(SolutionItems) = preProject
-		auction-depl.yml = auction-depl.yml
-		bid-depl.yml = bid-depl.yml
-		config.yml = config.yml
-		gateway-depl.yml = gateway-depl.yml
-		identity-depl.yml = identity-depl.yml
-		ingress-svc.yml = ingress-svc.yml
-		local-pvc.yml = local-pvc.yml
-		mongo-depl.yml = mongo-depl.yml
-		notify-depl.yml = notify-depl.yml
-		postgres-depl.yml = postgres-depl.yml
-		rabbit-depl.yml = rabbit-depl.yml
-		search-depl.yml = search-depl.yml
-		webapp-depl.yml = webapp-depl.yml
+		infra\K8S\auction-depl.yml = infra\K8S\auction-depl.yml
+		infra\K8S\bid-depl.yml = infra\K8S\bid-depl.yml
+		infra\K8S\config.yml = infra\K8S\config.yml
+		infra\K8S\gateway-depl.yml = infra\K8S\gateway-depl.yml
+		infra\K8S\identity-depl.yml = infra\K8S\identity-depl.yml
+		infra\K8S\ingress-svc.yml = infra\K8S\ingress-svc.yml
+		infra\K8S\local-pvc.yml = infra\K8S\local-pvc.yml
+		infra\K8S\mongo-depl.yml = infra\K8S\mongo-depl.yml
+		infra\K8S\notify-depl.yml = infra\K8S\notify-depl.yml
+		infra\K8S\postgres-depl.yml = infra\K8S\postgres-depl.yml
+		infra\K8S\rabbit-depl.yml = infra\K8S\rabbit-depl.yml
+		infra\K8S\search-depl.yml = infra\K8S\search-depl.yml
+		infra\K8S\webapp-depl.yml = infra\K8S\webapp-depl.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ingress", "ingress", "{5EECAE3E-36D9-4DBA-B08F-63C7E225B9A5}"
 	ProjectSection(SolutionItems) = preProject
-		ingress-depl.yml = ingress-depl.yml
+		infra\ingress\ingress-depl.yml = infra\ingress\ingress-depl.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devcerts", "devcerts", "{414B351B-62C4-4EE1-A064-C42358C76E25}"
